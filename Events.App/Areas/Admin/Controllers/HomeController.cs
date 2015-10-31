@@ -4,10 +4,17 @@
 
     using System.Web.Mvc;
 
+    using Events.Data.Contracts;
+
     #endregion
 
-    public class HomeController : Controller
+    public class HomeController : BaseAdminController
     {
+        public HomeController(IEventsData data)
+            : base(data)
+        {
+        }
+
         // GET: Admin/Home
         public ActionResult Index()
         {
