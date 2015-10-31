@@ -4,10 +4,18 @@
 
     using System.Web.Mvc;
 
+    using Events.Data.Contracts;
+
     #endregion
 
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
+        public HomeController(IEventsData data)
+            : base(data)
+        {
+        }
+
+        [AllowAnonymous]
         public ActionResult Index()
         {
             return this.View();
