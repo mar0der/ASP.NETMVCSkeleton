@@ -235,7 +235,6 @@
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -313,11 +312,11 @@
   <ItemGroup>
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\Admin\Views\Base\" />
+    <Folder Include="Properties\" />
     <Folder Include="Views\Base\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-    <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

@@ -20,20 +20,21 @@ namespace Events.Data.Migrations
         public Configuration()
         {
             this.AutomaticMigrationsEnabled = true;
+            this.AutomaticMigrationDataLossAllowed = true;
         }
 
         protected override void Seed(EventsDbContext eventsDbContext)
         {
             this.context = eventsDbContext;
-             
-            //Create role
+
+            // Create role
             this.CreateRole(GlobalConstants.AdminRole);
 
-            //Create administrator
+            // Create administrator
             this.CreateUser("mar0der", GlobalConstants.AdminRole);
 
-            //Create several users
-            for (int i = 1; i < 6; i++)
+            // Create several users
+            for (var i = 1; i < 6; i++)
             {
                 this.CreateUser("pesho" + i);
             }
@@ -44,17 +45,19 @@ namespace Events.Data.Migrations
             var userManager = new UserManager<User>(new UserStore<User>(this.context));
             if (userManager.FindByName(username) == null)
             {
-                var user = new User()
+                var user = new User
                                {
-                                   UserName = username,
-                                   Email = username + "@gmail.com",
-                                   PasswordHash = "ADDqeu799LPu2MFv/G9l9Dc3W5aM60JfeYUQx8JzZIkXL+IJ0SVahuH+m6/3efWFqw=="
-                                   //pass is 123
+                                   UserName = username, 
+                                   Email = username + "@gmail.com", 
+                                   PasswordHash =
+                                       "ADDqeu799LPu2MFv/G9l9Dc3W5aM60JfeYUQx8JzZIkXL+IJ0SVahuH+m6/3efWFqw=="
+
+                                   // pass is 123
                                };
 
                 var result = userManager.Create(user);
 
-                if (result.Succeeded == true && role != null)
+                if (result.Succeeded && role != null)
                 {
                     userManager.AddToRole(user.Id, role);
                 }
@@ -63,11 +66,10 @@ namespace Events.Data.Migrations
 
         private void CreateRole(string roleName)
         {
-            var roleManager =
-                new RoleManager<Microsoft.AspNet.Identity.EntityFramework.IdentityRole>(new RoleStore<IdentityRole>(this.context));
+            var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(this.context));
             if (!roleManager.RoleExists(roleName))
             {
-                var role = new Microsoft.AspNet.Identity.EntityFramework.IdentityRole();
+                var role = new IdentityRole();
                 role.Name = roleName;
                 roleManager.Create(role);
             }
