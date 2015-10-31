@@ -159,3 +159,5 @@ C:\Users\peter\Dropbox\1.SoftUni\Petar\Level 3\ASP\ApplicationSkeleton\Events.Ap
 C:\Users\peter\Dropbox\1.SoftUni\Petar\Level 3\ASP\ApplicationSkeleton\Events.App\bin\Ninject.xml
 C:\Users\peter\Dropbox\1.SoftUni\Petar\Level 3\ASP\ApplicationSkeleton\Events.App\bin\Ninject.Web.Common.xml
 C:\Users\peter\Dropbox\1.SoftUni\Petar\Level 3\ASP\ApplicationSkeleton\Events.App\bin\Ninject.Web.Mvc.xml
+C:\Users\peter\Dropbox\1.SoftUni\Petar\Level 3\ASP\ApplicationSkeleton\Events.App\bin\AutoMapper.dll
+C:\Users\peter\Dropbox\1.SoftUni\Petar\Level 3\ASP\ApplicationSkeleton\Events.App\bin\AutoMapper.xml
