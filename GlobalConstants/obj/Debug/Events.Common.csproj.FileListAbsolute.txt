@@ -1,0 +1,5 @@
+C:\Users\peter\Dropbox\1.SoftUni\Petar\Level 3\ASP\Lab\Events\GlobalConstants\bin\Debug\Events.Common.dll
+C:\Users\peter\Dropbox\1.SoftUni\Petar\Level 3\ASP\Lab\Events\GlobalConstants\bin\Debug\Events.Common.pdb
+C:\Users\peter\Dropbox\1.SoftUni\Petar\Level 3\ASP\Lab\Events\GlobalConstants\obj\Debug\Events.Common.dll
+C:\Users\peter\Dropbox\1.SoftUni\Petar\Level 3\ASP\Lab\Events\GlobalConstants\obj\Debug\Events.Common.pdb
+C:\Users\peter\Dropbox\1.SoftUni\Petar\Level 3\ASP\Lab\Events\GlobalConstants\obj\Debug\Events.Common.csprojResolveAssemblyReference.cache
