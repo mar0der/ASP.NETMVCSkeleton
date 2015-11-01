@@ -26,5 +26,11 @@
         {
             return this.View();
         }
+
+        [AllowAnonymous]
+        public ActionResult Error()
+        {
+            return this.View();
+        }
     }
 }
