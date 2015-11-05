@@ -1,9 +1,29 @@
-﻿@if (TempData.ContainsKey("success"))
+﻿<br />
+@if (this.TempData.ContainsKey("success"))
 {
-    <div class="alert alert-success">@TempData["success"]</div>
+    <div class="alert alert-success">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</a>
+        <strong>Success!</strong> @this.TempData["success"]
+    </div>
 }
-
-@if (TempData.ContainsKey("error"))
+@if (this.TempData.ContainsKey("info"))
 {
-    <div class="alert alert-danger">@TempData["error"]</div>
+    <div class="alert alert-info">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</a>
+        <strong>Info!</strong> @this.TempData["info"]
+    </div>
+}
+@if (this.TempData.ContainsKey("warning"))
+{
+    <div class="alert alert-warning">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</a>
+        <strong>Warning!</strong> @this.TempData["warning"]
+    </div>
+}
+@if (this.TempData.ContainsKey("danger"))
+{
+    <div class="alert alert-danger">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</a>
+        <strong>Success!</strong> @this.TempData["danger"]
+    </div>
 }

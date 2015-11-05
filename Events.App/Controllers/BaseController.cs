@@ -20,6 +20,12 @@
             this.Data = data;
         }
 
+        public BaseController(IEventsData data, User currentUser)
+        {
+            this.Data = data;
+            this.CurrentUser = currentUser;
+        }
+
         public IEventsData Data { get; private set; }
 
         public User CurrentUser { get; set; }
