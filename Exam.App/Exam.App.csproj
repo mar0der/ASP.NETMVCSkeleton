@@ -316,6 +316,7 @@
     <Folder Include="Areas\Admin\Views\Base\" />
     <Folder Include="Properties\" />
     <Folder Include="Views\Base\" />
+    <Folder Include="Views\Shared\DisplayTemplates\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
