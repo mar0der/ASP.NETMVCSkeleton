@@ -22,3 +22,8 @@ select,
 textarea {
     max-width: 280px;
 }
+
+/*Bootstrap notification style improvemnet*/
+.alert {
+    margin-top: 10px;
+}
