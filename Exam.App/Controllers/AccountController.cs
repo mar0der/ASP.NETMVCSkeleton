@@ -7,6 +7,7 @@
     using System.Web;
     using System.Web.Mvc;
 
+    using Exam.App.Extensions;
     using Exam.App.Models;
     using Exam.Models.Models;
 
@@ -177,7 +178,7 @@
                     // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
                     // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
                     // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
-                    this.TempData["success"] = "successful registration!";
+                    this.AddNotification("User Registered", NotificationType.SUCCESS);
                     return this.RedirectToAction("Index", "Home");
                 }
 

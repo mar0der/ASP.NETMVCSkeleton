@@ -2,6 +2,7 @@
 {
     #region
 
+    using System;
     using System.ComponentModel.DataAnnotations;
 
     #endregion
@@ -10,5 +11,8 @@
     {
         [Key]
         public int Id { get; set; }
+
+        public DateTime StartTime { get; set; }
+
     }
 }

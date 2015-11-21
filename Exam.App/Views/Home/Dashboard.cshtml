@@ -1,7 +1,36 @@
-﻿
+﻿@model Exam.Models.Models.Event
+
+@section scripts {
+    @Scripts.Render("~/bundles/bootstrap-datetimepicker")
+}
+
+@section styles {
+    @Styles.Render("~/Content/bootstrap-datetimepicker")
+}
+
 @{
     ViewBag.Title = "Dashboard";
 }
 
 <h2>This is for registered users only!</h2>
 
+@using (Html.BeginForm())
+{
+    <div class="form-group">
+        @Html.LabelFor(model => model.StartTime, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.StartTime, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.StartTime, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <script>
+            $(function() {
+                $('#StartTime').datetimepicker(
+                {
+                    format: 'DD-MMM-YYYY HH:mm',
+                    sideBySide: true,
+                    showTodayButton: true
+                });
+            });
+    </script>
+}

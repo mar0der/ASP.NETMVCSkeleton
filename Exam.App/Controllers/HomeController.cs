@@ -2,9 +2,12 @@
 {
     #region
 
+    using System;
     using System.Web.Mvc;
 
+    using Exam.App.Extensions;
     using Exam.Data.Contracts;
+    using Exam.Models.Models;
 
     #endregion
 
@@ -24,7 +27,12 @@
         [Authorize]
         public ActionResult Dashboard()
         {
-            return this.View();
+            var model = new Event()
+                            {
+                                Id = 1
+                               // StartTime = DateTime.Now
+                            };
+            return this.View(model);
         }
 
         [AllowAnonymous]
